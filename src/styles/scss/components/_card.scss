@@ -1,0 +1,52 @@
+.card {
+  --height: 248px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: var(--height);
+  padding: 24px;
+  background-color: hsl(var(--med-color-neutral-1));
+  border-radius: 8px;
+
+  &--main {
+    --height: auto;
+
+    justify-content: initial;
+
+    .card__header {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    height: 48px;
+    width: 48px;
+    min-width: 48px;
+    stroke: hsl(var(--med-color-neutral-9));
+    fill: transparent;
+    align-self: flex-start;
+
+    &--fill {
+      fill: hsl(var(--med-color-neutral-9));
+    }
+  }
+
+  &__list {
+    list-style: initial;
+  }
+
+  &__item {
+    margin: 0 0 24px 24px;
+  }
+
+  &__button {
+    margin: 24px auto 0 auto;
+  }
+}

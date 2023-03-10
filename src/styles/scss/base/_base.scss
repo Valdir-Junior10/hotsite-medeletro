@@ -1,0 +1,71 @@
+:root {
+  --color-hero: radial-gradient(
+    circle at 100% 0%,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  --color-heading: radial-gradient(
+    100% 108.16% at 100% 0%,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  --color-button: radial-gradient(
+    100% 108.16% at 100% 0%,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  --color-section: radial-gradient(
+    circle at 100% 0%,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  --color-navigation: radial-gradient(
+    var(--color-primary),
+    var(--color-secondary)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'fsemeric';
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--med-color-neutral-2));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--med-color-neutral-4));
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

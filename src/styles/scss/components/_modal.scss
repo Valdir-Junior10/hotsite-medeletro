@@ -1,0 +1,209 @@
+@use 'sass:map';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    width: 90vh;
+    height: 55vh;
+    overflow: hidden;
+    background-color: #fff;
+    cursor: initial;
+
+    @media (max-width: map.get($breakpoints, md)) {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    &--windows {
+      .modal__paragrafos--window {
+        display: block;
+      }
+
+      .modal__paragrafos--mobile {
+        display: none;
+      }
+
+      .modal__download--window {
+        display: flex;
+      }
+
+      .modal__download--mobile {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      .modal__paragrafos--window {
+        display: none;
+      }
+
+      .modal__paragrafos--mobile {
+        display: block;
+      }
+
+      .modal__download--window {
+        display: none;
+      }
+
+      .modal__download--mobile {
+        display: flex;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 16px;
+  }
+
+  &__close {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__icon-close {
+    width: 24px;
+    height: 24px;
+    stroke: hsl(var(--med-color-neutral-10));
+  }
+
+  &__body {
+    padding: 16px;
+    overflow: auto;
+  }
+
+  &__button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 24px;
+  }
+
+  &__button {
+    padding: 12px 16px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    // background-color: hsl(var(--med-color-neutral-2));
+    // border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &--active {
+      color: var(--color-primary);
+    }
+  }
+
+  &__requisitos {
+    margin-bottom: 24px;
+    overflow: auto;
+  }
+
+  &__heading {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__bold {
+    font-weight: 600;
+  }
+
+  &__download-container {
+    display: flex;
+
+    @media (max-width: map.get($breakpoints, sm)) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__download {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    background-color: hsl(var(--med-color-neutral-2));
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &:hover {
+      color: hsl(var(--med-color-neutral-1));
+      background-color: var(--color-primary);
+
+      .modal__icon {
+        fill: hsl(var(--med-color-neutral-1));
+        stroke: hsl(var(--med-color-neutral-1));
+      }
+    }
+
+    @media (max-width: map.get($breakpoints, sm)) {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    transition: all 0.3s;
+    fill: hsl(var(--med-color-neutral-9));
+    stroke: hsl(var(--med-color-neutral-9));
+  }
+}
+
+.open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+}

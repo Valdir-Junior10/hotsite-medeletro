@@ -1,0 +1,46 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  padding: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__heading {
+    padding-top: 46px;
+  }
+}
+
+.clm .hero {
+  background-image: url('../../images/bg_CLM.svg'), var(--color-hero);
+}
+
+.cir .hero {
+  background-image: url('../../images/bg_CIR.svg'), var(--color-hero);
+}
+
+.go .hero {
+  background-image: url('../../images/bg_GO.svg'), var(--color-hero);
+}
+
+.pre .hero {
+  background-image: url('../../images/bg_PRE.svg'), var(--color-hero);
+}
+
+.ped .hero {
+  background-image: url('../../images/bg_PED.svg'), var(--color-hero);
+}
+
+.outros .hero {
+  background-image: url('../../images/bg_OUTROS.svg'), var(--color-hero);
+}
+
+.nopapo .hero {
+  background-image: url('../../images/bg_NOPAPO.svg'), var(--color-hero);
+}

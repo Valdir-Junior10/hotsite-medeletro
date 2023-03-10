@@ -1,0 +1,49 @@
+@use 'sass:map';
+
+// .navigation {
+//   &__background {
+//     position: absolute;
+//     top: 9px;
+//     right: 16px;
+//     width: 3rem;
+//     height: 3rem;
+//     background-image: var(--color-navigation);
+//     border-radius: 50%;
+//     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+//   }
+// }
+
+// .nav-mobile {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   visibility: hidden;
+//   opacity: 0;
+//   transition: opacity 0.4s ease-in-out;
+//   pointer-events: none;
+// }
+
+/**
+* state
+**/
+// .navigation {
+//   $block: &;
+//   display: none;
+
+//   @media (max-width: map.get($breakpoints, xl)) {
+//     display: block;
+//   }
+
+//   &.open #{$block}__background {
+//     transform: scale(100);
+//     opacity: 1;
+//   }
+
+//   &.open-menu .nav-mobile {
+//     visibility: visible;
+//     opacity: 1;
+//     pointer-events: initial;
+//   }
+// }

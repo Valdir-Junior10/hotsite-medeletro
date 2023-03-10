@@ -1,0 +1,13 @@
+@use 'sass:map';
+
+.main {
+  padding-top: 104px;
+
+  @media (max-width: map.get($breakpoints, xl)) {
+    padding-top: 66px;
+  }
+
+  @media (max-width: map.get($breakpoints, md)) {
+    padding-top: 56px;
+  }
+}

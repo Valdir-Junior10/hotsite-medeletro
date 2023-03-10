@@ -1,0 +1,160 @@
+@use 'sass:map';
+
+.section-medsoft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 16px;
+  background-color: hsl(var(--med-color-neutral-2));
+
+  &__button {
+    margin-bottom: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__heading {
+    padding-bottom: 24px;
+  }
+}
+
+.section-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 16px;
+
+  &__container {
+    max-width: 816px;
+    margin: 0 auto;
+  }
+
+  &__iframe {
+    padding-bottom: 24px;
+  }
+
+  &__button {
+    padding-bottom: 24px;
+  }
+
+  &__heading {
+    padding-bottom: 24px;
+  }
+}
+
+.section-novidades {
+  padding: 104px 16px;
+  background-color: hsl(var(--med-color-neutral-2));
+
+  @media (max-width: map.get($breakpoints, xl)) {
+    padding: 124px 16px;
+  }
+
+  &__container {
+    max-width: 1232px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    padding-bottom: 48px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    padding: 48px 0;
+
+    @media (max-width: map.get($breakpoints, lg)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: map.get($breakpoints, md)) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__highlight {
+    color: #000;
+    text-align: center;
+  }
+}
+
+.section-highlight {
+  padding: 64px 16px;
+  background: var(--color-section);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    max-width: 998px;
+    margin: 0 auto;
+
+    @media (max-width: map.get($breakpoints, md)) {
+      // display: block;
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    @media (max-width: map.get($breakpoints, xl)) {
+      width: 40%;
+    }
+
+    @media (max-width: map.get($breakpoints, md)) {
+      width: 50%;
+      margin-bottom: 64px;
+    }
+
+    @media (max-width: map.get($breakpoints, sm)) {
+      width: 60%;
+    }
+  }
+
+  &__heading {
+    padding-bottom: 24px;
+  }
+
+  &__content {
+    padding-left: 64px;
+
+    @media (max-width: map.get($breakpoints, md)) {
+      padding-left: 0;
+    }
+  }
+}
+
+.section-conteudo {
+  padding: 104px 16px;
+  background-color: hsl(var(--med-color-neutral-2));
+
+  &__container {
+    max-width: 848px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    padding-bottom: 48px;
+  }
+}
+
+.section-inscrever {
+  padding: 72px 16px 64px 16px;
+
+  &__container {
+    max-width: 869px;
+    margin: 0 auto;
+  }
+
+  &__card {
+    // --height: 208px;
+    --height: auto;
+    min-height: 208px;
+    background-color: hsl(var(--med-color-neutral-2));
+
+    .card__heading {
+      text-align: center;
+    }
+  }
+}
